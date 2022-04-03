@@ -1,25 +1,16 @@
-#include "blocking_intrusive_queue.h"
+#include "blocking_queue.h"
 
 #include <iostream>
-#include <memory>
 #include <thread>
 
-class TestNode: public Node<TestNode* >
-{
-public:
-    TestNode(int num): num_(num) {}
-private:
-    int num_;
-};
-
-BlockingIntrusiveQueue<TestNode *> queue;
+BlockingQueue<int> queue;
 
 void Push()
 {
     int i = 0;
 
-    while(i<10000){
-        queue.Push(new TestNode(i));
+    while(i<1000000){
+        queue.Push(i);
         i++;
     }
 }
@@ -28,7 +19,7 @@ void Pop()
 {
     int i = 0;
 
-    while(i<10000){
+    while(i<1000000){
         queue.Pop();
         i++;
     }
@@ -37,8 +28,9 @@ void Pop()
 int main()
 {
     std::thread t1(Push);
-    std::thread t2(Push);
-    std::thread t3(Pop);
+    std::thread t2(Pop);
+    std::thread t3(Push);
+
     t1.join();
     t2.join();
     t3.join();
