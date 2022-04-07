@@ -4,6 +4,8 @@
 * RAII guard - an object that, when constructed, will remember what it needs to do when destroyed.
 * This way, regardless of whether the scope exits normally or by an exception, the work will happen automatically
 
+</br>
+
 ``` c++
 // raii_guard.cc
 
@@ -22,5 +24,7 @@ void raii_guard_function() {
 }
 
 ```
+
+</br>
 
 ### reference: Software Architecture with C++: Design modern systems using effective architecture concepts, design patterns, and techniques with C++20
