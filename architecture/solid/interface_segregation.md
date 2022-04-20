@@ -3,7 +3,7 @@
 * The interface segregation principle is just about what its name suggests.
 * `No client should be forced to depend on methods that it does not use`
 * Firstly, you should prefer more but smaller interfaces to a single big one.
-* Secondly, when you're adding a derived class or are extending the functionality of an existing one, __you shold think before you extend the interface the class implementations.__
+* Secondly, when you're adding a derived class or are extending the functionality of an existing one, __you should think before you extend the interface the class implementations.__
 
 </br>
 

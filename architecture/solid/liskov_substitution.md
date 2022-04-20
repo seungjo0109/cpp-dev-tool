@@ -1,7 +1,7 @@
 ## Liskov substitution principle
 
 * The Liskov Substitution Principle(LSP) states that if a function works with a pointer or reference to a base object, it must also work with a pointer or reference to any of its derived objects.
-* This rule is somtimes broken because the techniques we apply in source code do not always work in real-world abstractions.
+* This rule is sometimes broken because the techniques we apply in source code do not always work in real-world abstractions.
 * A famous example is a square and a rectangle. Mathmatically speaking, the former is a specialization of the letter, so there's an `"is a"` relationship from one to the other.
 
 </br>
