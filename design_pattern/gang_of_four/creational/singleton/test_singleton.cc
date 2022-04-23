@@ -1,4 +1,4 @@
-#include "singleton.h"
+#include "singleton.hpp"
 
 #include <iostream>
 

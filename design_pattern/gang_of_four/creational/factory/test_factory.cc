@@ -1,4 +1,4 @@
-#include "factory.h"
+#include "factory.hpp"
 
 int main()
 {
