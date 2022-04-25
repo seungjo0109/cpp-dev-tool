@@ -14,8 +14,8 @@ public:
 
 private:
     Singleton(){ name_ = "singleton";}
-    Singleton(const Singleton&){}
-    Singleton& operator=(const Singleton&){}
+    Singleton(const Singleton&) = delete;
+    Singleton& operator=(const Singleton&) = delete;
     ~Singleton(){}
 
     const char* name_;

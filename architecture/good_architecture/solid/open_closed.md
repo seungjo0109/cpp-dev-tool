@@ -1,4 +1,4 @@
-## Single responsibility principle
+## Open-Closed principle
 
 * The Open-Closed Principle(OCP) means that code should be open for extension but closed for modification.
 * Open for extension means that we could extend the list of types the code supports easily.
@@ -43,7 +43,7 @@ std::ostream &operator<<(std::ostream &stream, const MyPair &mp){
 
 </br>
 
-* Note that this definition of OCP is slightly differenct from the more common one related to polymorphism.
+* Note that this definition of OCP is slightly difference from the more common one related to polymorphism.
 * The latter is about creating base classes that can't be modified themselves, but are open for others to inherit from them.
 
 </br>

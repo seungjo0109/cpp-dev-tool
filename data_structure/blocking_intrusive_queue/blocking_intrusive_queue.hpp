@@ -51,7 +51,7 @@ class BlockingIntrusiveQueue
 {
 public:
 
-    BlockingIntrusiveQueue() {}
+    BlockingIntrusiveQueue() = default;
     BlockingIntrusiveQueue(const BlockingIntrusiveQueue&) = delete;
     BlockingIntrusiveQueue& operator=(const BlockingIntrusiveQueue&) = delete;
 
