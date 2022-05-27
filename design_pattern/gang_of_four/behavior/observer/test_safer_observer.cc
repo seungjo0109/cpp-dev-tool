@@ -1,7 +1,9 @@
-#include "observer.hpp"
+#include <iostream>
+
+#include "safer_observer.hpp"
 
 // Observable class
-class Person : public Observalble<Person>
+class Person : public SaferObservalble<Person>
 {
 public:
     Person(int age): age_(age) {}
@@ -22,7 +24,7 @@ private:
 };
 
 struct ConsolePersonObserver
-    : public Observer<Person>
+    : public SaferObserver<Person>
 {
 private:
     void FieldChanged(Person &source, const std::string &field_name) override
@@ -40,6 +42,7 @@ int main()
     
     person.Subscribe(cpo);
     person.SetAge(30);
+    person.SetAge(25);
     
     person.Unsubscribe(cpo);
     person.SetAge(20);
