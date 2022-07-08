@@ -59,7 +59,7 @@ int main()
         return x + "in a ";
     });
     vec_filters.emplace_back([](const std::string& x){
-        return x + "containers";
+        return x + "container";
     });
 
     std::string str = "Storing ";
