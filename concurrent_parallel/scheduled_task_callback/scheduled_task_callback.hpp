@@ -25,6 +25,8 @@ public:
     // Non copyable & movable
     ScheduledTaskCallback(ScheduledTaskCallback const&) = delete;
     ScheduledTaskCallback& operator=(ScheduledTaskCallback const&) = delete;
+    ScheduledTaskCallback(ScheduledTaskCallback&&) = delete;
+    ScheduledTaskCallback& operator=(ScheduledTaskCallback&&) = delete;
 
     void Add(std::function<void()> callback, float interval_time, void** cookie);
     void Change(float interval_time, const void* cookie);
