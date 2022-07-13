@@ -83,4 +83,5 @@ void ScheduledTaskCallback::RunOnce()
             break;
         }
     }
+    mutex_.unlock();
 }
